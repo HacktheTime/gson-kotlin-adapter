@@ -1,6 +1,6 @@
 package com.livefront.gsonkotlinadapter.util
 
-import com.google.gson.internal.`$Gson$Types`
+import com.google.gson.internal.GsonTypes
 import com.google.gson.reflect.TypeToken
 import kotlin.reflect.KClass
 import kotlin.reflect.KParameter
@@ -21,4 +21,4 @@ internal fun <T : Any> TypeToken<T>.toKClass(): KClass<T> =
  */
 internal fun TypeToken<*>.resolveParameterType(
     property: KParameter,
-): TypeToken<*> = TypeToken.get(`$Gson$Types`.resolve(type, rawType, property.type.javaType))
+): TypeToken<*> = TypeToken.get(GsonTypes.resolve(type, rawType, property.type.javaType))

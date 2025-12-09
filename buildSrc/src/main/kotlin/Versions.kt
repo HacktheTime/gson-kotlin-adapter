@@ -7,7 +7,7 @@ object Versions {
     }
 
     object Google {
-        const val gson = "2.10.1"
+        const val gson = "2.13.2"
         const val hilt = "2.47"
     }
 
